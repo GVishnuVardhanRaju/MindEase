@@ -272,18 +272,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
           const hero = main.querySelector<HTMLElement>(".overview-hero");
           const heroImage = hero?.querySelector<HTMLImageElement>("img");
-          if (hero && heroImage) {
-            gsap.to(heroImage, {
-              yPercent: 10,
-              ease: "none",
-              scrollTrigger: {
-                trigger: hero,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1.2,
-              },
-            });
-          }
 
           gsap.utils
             .toArray<HTMLButtonElement>(
