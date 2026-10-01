@@ -1,0 +1,46 @@
+.cta-transition-overlay {
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cta-transition-glow,
+.cta-transition-flash {
+  position: absolute;
+  inset: 0;
+}
+
+.cta-transition-glow {
+  width: min(20vw, 240px);
+  aspect-ratio: 1;
+  margin: max(-10vw, -120px) 0 0 max(-10vw, -120px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.56), rgba(139, 125, 255, 0.22) 44%, transparent 72%);
+  filter: blur(8px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.cta-transition-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.cta-transition-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #f5efff;
+  box-shadow: 0 0 9px 2px rgba(192, 132, 252, 0.64);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.cta-transition-flash {
+  background: radial-gradient(ellipse at center, rgba(255, 250, 255, 0.68), rgba(225, 215, 255, 0.34) 45%, rgba(139, 125, 255, 0.2));
+  opacity: 0;
+  mix-blend-mode: screen;
+}
